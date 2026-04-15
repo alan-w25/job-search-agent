@@ -1,0 +1,8 @@
+{
+  "name": "job-search-agent",
+  "version": "1.0.0",
+  "description": "End-to-end job search coaching: profile building, JD analysis with match scoring, ATS-optimized resume tailoring, deep company research, tailored interview prep with interviewer perspective reports, mock interviews, recruiter coaching, rejection diagnosis, and offer negotiation.",
+  "author": {
+    "name": ""
+  }
+}

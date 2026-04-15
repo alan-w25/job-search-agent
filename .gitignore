@@ -1,0 +1,5 @@
+applications/
+*.pdf
+*.docx
+career-helper-preferences.md
+.DS_Store

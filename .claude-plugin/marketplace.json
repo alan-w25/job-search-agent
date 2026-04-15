@@ -1,0 +1,15 @@
+{
+  "name": "job-search-agent",
+  "version": "1.0.0",
+  "description": "End-to-end AI career coaching: profile building, JD analysis with match scoring, ATS-optimized resume tailoring, deep company research, tailored interview prep, mock interviews, recruiter coaching, rejection diagnosis, and offer negotiation.",
+  "owner": {
+    "name": ""
+  },
+  "plugins": [
+    {
+      "name": "job-search-agent",
+      "source": "./job-search-agent",
+      "description": "End-to-end job search coaching with profile building, JD analysis, resume tailoring, and interview prep."
+    }
+  ]
+}
