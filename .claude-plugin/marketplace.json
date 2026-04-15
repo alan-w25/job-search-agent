@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "End-to-end AI career coaching: profile building, JD analysis with match scoring, ATS-optimized resume tailoring, deep company research, tailored interview prep, mock interviews, recruiter coaching, rejection diagnosis, and offer negotiation.",
   "owner": {
-    "name": ""
+    "name": "Alan Wu"
   },
   "plugins": [
     {
