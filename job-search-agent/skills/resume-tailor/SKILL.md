@@ -55,6 +55,51 @@ Decide which roles and achievements from the profile are most relevant:
    irrelevant roles get 1 or get cut entirely
 4. Determine if any projects should be elevated to their own section
 
+### Achievement Triage (When Over Page Limit)
+
+When the resume exceeds the target length, use this scoring framework to decide
+what to cut. Never cut arbitrarily — every cut should be justified.
+
+Score each bullet on three axes (1-5 each):
+
+**RELEVANCE — How directly does this map to a JD requirement?**
+- 5: Directly addresses a must-have skill or responsibility
+- 4: Addresses a nice-to-have or closely adjacent skill
+- 3: Demonstrates transferable capability
+- 2: Shows general competence but weak JD connection
+- 1: No meaningful connection to this specific role
+
+**IMPRESSIVENESS — How strong is the impact?**
+- 5: Quantified, large-scale, clear business outcome ("saved $2M", "served 10M users")
+- 4: Quantified, meaningful scope ("reduced latency by 40%", "led team of 8")
+- 3: Some metrics or clear scope but moderate impact
+- 2: Descriptive but lacks quantification ("improved performance")
+- 1: Vague or task-based ("responsible for X")
+
+**UNIQUENESS — Does this differentiate you from other candidates?**
+- 5: Unusual achievement most candidates for this role cannot claim
+- 4: Strong achievement that some candidates might match
+- 3: Solid but common for this career level
+- 2: Expected for someone at this level
+- 1: Table stakes — everyone applying will have this
+
+**Total Score: 3-15. Cut lowest-scoring bullets first.**
+
+Tiebreakers (in order):
+1. Keep the more recent role's bullet (recency bias is real in hiring)
+2. Keep the bullet that covers a JD keyword not covered elsewhere
+3. Keep the bullet with the stronger STAR story backing (for interview prep)
+
+**Cut Strategies by Score Range:**
+- 12-15: Keep — these are your strongest bullets
+- 9-11: Keep if space allows, trim wording if not
+- 6-8: Cut first, unless it covers a unique keyword
+- 3-5: Cut immediately — these are diluting your resume
+
+After triage, verify that keyword coverage hasn't dropped below 70%. If cutting
+a bullet removes the only mention of a must-have skill, move that skill mention
+to the Skills section instead.
+
 ### Section Ordering
 Choose the optimal resume structure for this specific application:
 - **Experience-first** (default for 3+ years experience): Summary → Experience →
@@ -229,6 +274,60 @@ If the user asks for changes:
 - "Add more leadership" → elevate management/mentorship achievements
 - "Make it more senior" → use strategic language, emphasize scope and impact over tasks
 - "ATS isn't picking it up" → check keyword coverage, simplify formatting, spell out acronyms
+
+## Over-Qualification Strategy
+
+When the user's profile seniority exceeds the JD seniority by 2+ levels (e.g.,
+Director applying for Senior IC, Staff Engineer applying for Mid-level), the
+resume needs deliberate calibration to avoid the "overqualified" rejection.
+
+### Why Overqualified Candidates Get Rejected
+
+Hiring managers worry about:
+1. **Flight risk**: "They'll leave as soon as something at their level opens up"
+2. **Salary mismatch**: "They'll want more than our budget allows"
+3. **Management fit**: "They'll be frustrated reporting to someone junior to them"
+4. **Culture friction**: "They'll try to change how we do things"
+
+### Resume Adjustments
+
+**Summary:** Lead with "why this role" — genuine enthusiasm for IC work, domain
+passion, specific interest in this company's problem space. Make the downlevel
+feel intentional, not desperate.
+
+Example: "Staff-level engineer seeking a focused IC role building [specific tech
+from JD]. After [N] years scaling teams, I'm returning to what I love most:
+hands-on [domain] work. Looking for depth over breadth."
+
+**Title Framing:** Consider using functional descriptions over management titles
+when the management experience isn't relevant:
+- Instead of "VP of Engineering" → "Technical Lead, Platform Engineering"
+- Instead of "Director of Data Science" → "Senior Data Scientist / Tech Lead"
+- Only adjust if the user agrees — never misrepresent. Explain the trade-off.
+
+**Achievement Reframing:**
+- "Managed team of 12 engineers" → "Partnered with 12 engineers to ship X"
+- "Set quarterly OKRs for the org" → "Defined technical strategy for [project]"
+- "Grew team from 3 to 15" → "Scaled [system] to handle [metric]"
+- Keep management achievements only if they demonstrate relevant IC skills
+
+**What to Emphasize:**
+- Recent hands-on technical work (even if it's a small portion of the role)
+- Individual contributions within team projects
+- Technical decision-making, architecture, code reviews
+- Mentorship framed as "technical leadership" rather than "people management"
+
+**What to De-Emphasize (not remove — reframe):**
+- Team size and direct reports
+- Budget ownership
+- Hiring and performance reviews
+- Strategy and roadmap ownership (unless it's a Staff+ IC role)
+
+**WARNING:** If the user is downleveling by more than 2 levels, flag this for
+discussion before proceeding: "You're applying for a [level] role with [level]
+experience. This can work if it's intentional, but hiring managers will ask why.
+Let's make sure your narrative is airtight. What's driving this move?" The answer
+becomes the foundation of the resume's positioning.
 
 ## Tone
 

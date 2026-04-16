@@ -312,6 +312,84 @@ Questions You Should Practice Again:
 After debrief, offer: "Want to practice that question again with the feedback
 in mind?" or "Shall we do another round focusing on [weak area]?"
 
+### Mock Performance Tracking
+
+After each mock interview, record performance data in the application tracker
+to enable improvement tracking across sessions.
+
+**Per-Mock Record:**
+```json
+{
+  "mock_id": "mock_[timestamp]",
+  "date": "",
+  "target_role_slug": "",
+  "mock_type": "behavioral|technical|case|mixed",
+  "persona": "recruiter|hiring_manager|technical|executive|panel",
+  "difficulty": "standard|silent|skeptical|rapid_fire|tangent",
+  "questions_asked": 0,
+  "per_question_scores": [
+    {
+      "question_summary": "",
+      "score": "strong|good|needs_work",
+      "weakness_category": "clarity|specificity|structure|confidence|relevance|conciseness"
+    }
+  ],
+  "overall_score": 0,
+  "hire_recommendation": "strong_yes|yes|maybe|no",
+  "top_weakness": "",
+  "top_strength": ""
+}
+```
+
+**After 2+ Mocks, Generate Improvement Report:**
+
+```
+MOCK INTERVIEW IMPROVEMENT REPORT
+==================================
+Sessions completed: [N]
+Date range: [first] to [latest]
+
+SCORE TREND: [Improving / Plateauing / Declining]
+  Session 1: [score] ([type], [difficulty])
+  Session 2: [score] ([type], [difficulty])
+  ...
+
+PERSISTENT WEAKNESSES (appeared in 2+ sessions):
+- [Weakness]: Appeared in [N]/[total] mocks. Specific instances: [list]
+  → FIX: [specific, actionable recommendation]
+
+STRONGEST AREAS (consistently scored "strong"):
+- [Strength]: [what to lean into during real interview]
+
+QUESTION TYPES MASTERED:
+- [Type]: Consistently strong. Ready for real interviews.
+
+QUESTION TYPES NEEDING WORK:
+- [Type]: Inconsistent. Recommended drill: [specific exercise]
+
+RECOMMENDED NEXT MOCK:
+- Type: [type] (because [reason])
+- Difficulty: [difficulty] (because [reason])
+- Focus area: [specific weakness to target]
+```
+
+**Plateau Detection:**
+If scores have not improved after 3+ mocks at the same difficulty level:
+
+"Your mock scores have leveled off at [level]. This is normal — here's what it means
+and what to try:
+
+1. CHANGE FORMAT: Try recording yourself answering questions out loud. Hearing your
+   own answers reveals patterns you don't notice in text.
+2. ISOLATE THE WEAKNESS: Instead of full mocks, practice ONLY [top weakness] with
+   5 rapid-fire questions focused on that one skill.
+3. INCREASE DIFFICULTY: If you're consistently 'good' at standard difficulty, try
+   skeptical or rapid-fire mode. Discomfort drives growth.
+4. SCHEDULE THE REAL THING: Diminishing returns on practice are real. If you're
+   scoring 'yes' or above on hire recommendation, you may be ready. The best
+   practice is a real interview where the stakes are lower (a backup company,
+   not your top choice)."
+
 ---
 
 ## Mode 4: Recruiter Coach
@@ -380,6 +458,79 @@ Ask the user:
 2. "How do you think it went?" → Assess confidence level
 3. "Anything that caught you off guard?" → Identify gaps to fill
 4. "What signals did you pick up about next steps?" → Read between the lines
+
+### Story Resonance Log
+
+Track which STAR stories actually land in real interviews — not just mocks.
+This data is gold for future interview prep.
+
+**After each interview, for each STAR story used, record:**
+
+```json
+{
+  "story_id": "star_X",
+  "story_title": "",
+  "interview_context": {
+    "company": "",
+    "role": "",
+    "stage": "phone|hm|technical|panel|executive",
+    "interviewer_role": ""
+  },
+  "question_that_prompted_it": "",
+  "delivery": {
+    "interviewer_reaction": "engaged|neutral|skeptical|confused",
+    "follow_up_type": "probing_deeper|moved_on|challenged|asked_for_more_detail",
+    "self_assessment": "nailed_it|decent|fumbled|wrong_story_choice"
+  }
+}
+```
+
+**Ask the user after each interview:**
+1. "Which of your prepared stories did you actually use?"
+2. "For each one — how did the interviewer react? Did they lean in, ask follow-ups,
+   or move on quickly?"
+3. "Were there questions where you didn't have a good story ready?"
+
+**After 3+ Real Interviews, Generate Story Effectiveness Report:**
+
+```
+STAR STORY EFFECTIVENESS REPORT
+================================
+
+TOP PERFORMERS (use more):
+- "[Story Title]" (star_X): Used [N] times. Reaction: engaged [N]/[N] times.
+  → This story consistently resonates. Lead with it when relevant.
+  → Works best for: [question types / company types]
+
+UNDERPERFORMERS (rework or retire):
+- "[Story Title]" (star_X): Used [N] times. Reaction: neutral/skeptical [N]/[N].
+  → Diagnosis: [too long / too vague / wrong level of detail / not relevant
+    enough to the roles you're targeting]
+  → FIX: [specific rework suggestion — e.g., "tighten the action section,
+    lead with the result, add a specific metric"]
+
+STORY GAPS (questions with no good story):
+- "[Question type]": Asked [N] times across interviews, no strong story available.
+  → RECOMMENDATION: Mine your profile for a story in the [category] category,
+    or build new experience that creates one (see skills-gap-closer).
+
+USAGE DISTRIBUTION:
+- Leadership stories used: [N] times
+- Technical stories used: [N] times
+- Conflict stories used: [N] times
+  ...
+  → [Flag if distribution is skewed: "You're over-relying on technical stories.
+    Prepare more leadership/collaboration stories for panel rounds."]
+```
+
+Update the career profile's STAR story records with usage data:
+`times_used`, `last_used_for`, and a new field `resonance_score` (calculated
+from reaction and follow-up patterns: engaged + probing_deeper = high,
+neutral + moved_on = low).
+
+Stories with consistently high resonance scores get prioritized in future
+interview prep. Stories with low scores get flagged for rework in the next
+career-profile-builder session.
 
 ### Thank-You Email
 Generate a personalized thank-you that:

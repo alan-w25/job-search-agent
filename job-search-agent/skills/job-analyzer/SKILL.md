@@ -88,6 +88,52 @@ Scan the JD for these patterns and flag them with explanations:
 
 Save decoded signals to the analysis for the interview-coach skill to reference later.
 
+### JD Freshness Analysis
+
+A JD's age and evolution tell you as much as its content. Stale JDs mean something
+is wrong — either the bar is unrealistic, the role is deprioritized, or internal
+politics are blocking the hire.
+
+**Freshness Signals to Check:**
+
+1. **Posted Date (if available):**
+   - <14 days: Fresh — standard urgency
+   - 14-30 days: Aging — they may have candidates in pipeline. Speed matters.
+   - 30-60 days: Stale — either picky, budget issues, or low priority. Ask in interview.
+   - 60+ days: Red flag — search "[company] [role]" to see if reposted. Reposting
+     suggests previous candidates didn't work out (high bar or role confusion).
+
+2. **Tech Stack Anachronisms:**
+   - Mentions outdated library versions (e.g., "React 16" when 19 is current) = JD
+     hasn't been updated. The team may actually use newer tech but HR copied the old JD.
+   - Mentions deprecated tools = either legacy system (expect migration work) or
+     out-of-touch hiring manager.
+
+3. **Salary Range vs. Market:**
+   - Range significantly below current market = budget was set months ago and not updated.
+   - This is negotiation intel — they may have flexibility above the posted range.
+
+4. **Urgency Language Contradictions:**
+   - "Urgently hiring" + post age >30 days = contradiction worth probing
+   - "Immediate start" + lengthy interview process described = misaligned expectations
+
+5. **Reposting Patterns:**
+   - Search for the same role posted multiple times. If reposted 3+ times, investigate:
+   - The role may be poorly scoped (they don't know what they want)
+   - Previous hires may have left quickly (retention issue)
+   - Internal candidate may keep falling through (they might not actually want external)
+
+**Output:** Present as a single line in the analysis:
+```
+JD FRESHNESS: [Fresh / Aging / Stale / Red Flag] — [one-line reasoning]
+```
+
+If Stale or Red Flag, add it to the Red Flags section with a recommended interview
+question to probe the issue: "This role has been posted for [N] days. In the interview,
+ask: 'How long has this search been open, and what are you looking for that you haven't
+found yet?' — the answer tells you if the bar is unrealistic or if there's an internal
+blocker."
+
 ## Step 3: Match Scoring
 
 Score the match on a 0-100 scale using weighted categories:
@@ -115,6 +161,45 @@ Present the score with a clear recommendation:
   a strong referral or a compelling 'why me' angle."
 - **Below 40 — Not a Fit**: "This isn't your strongest shot. But check if the JD is
   inflated — if the 'must-haves' feel aspirational, the real bar may be lower."
+
+### Company Stage Adjustment
+
+Base match scores assume a generic company context. After calculating the base
+score, apply a stage modifier — because the same JD means fundamentally different
+things at different company stages.
+
+**Early Startup (Seed – Series A):**
+- Hard Skills weight: 30% → 25% (they'll teach you their stack, they need builders)
+- Responsibility Fit: 15% → 25% (breadth matters more than depth — you'll do everything)
+- Add: Ambiguity Tolerance Bonus (+5 if profile shows startup experience, scrappy projects,
+  or "built X from scratch" achievements)
+- Rationale: Early startups hire for adaptability and ownership. A perfect skill match
+  who needs hand-holding is worse than a 70% skill match who figures things out.
+
+**Growth Stage (Series B – D):**
+- Weights remain standard
+- Add: Process Building Bonus (+5 if profile shows "built X process/system from scratch,"
+  "scaled X from Y to Z," or "established X team/practice")
+- Rationale: Growth companies need people who can build the rails while the train is moving.
+
+**Late Stage / Public:**
+- Hard Skills weight: 30% → 35% (specific stack and tooling matters more — less flexibility)
+- Responsibility Fit: 15% → 10% (roles are narrower, specialization valued)
+- Add: Scale Experience Bonus (+5 if profile shows large-scale systems, enterprise clients,
+  or teams of 50+)
+- Rationale: Large companies have established stacks and processes. They want someone who
+  can slot in and deliver in their specific environment.
+
+**Detecting Company Stage:**
+- JD mentions funding round → direct signal
+- "We're a team of [N]" → <30 is likely early, 30-200 growth, 200+ late
+- Use Crunchbase/web search if stage not obvious from JD
+- If stage cannot be determined, skip adjustment and note: "Company stage unknown —
+  base score shown without stage adjustment"
+
+**Disclosure:** Always show both scores:
+"Match Score: [adjusted]/100 (adjusted from [base]/100 for [stage] context)"
+with a one-line explanation of what changed and why.
 
 ### Gap Analysis
 

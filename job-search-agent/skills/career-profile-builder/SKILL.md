@@ -96,6 +96,42 @@ ask "by how much?" If they say "led a project," ask "how many people, what was t
 budget, what was the outcome?" If they say "built a dashboard," ask "who used it, what
 decisions did it drive, is it still in use?"
 
+### Achievement Extraction for Stuck Users
+
+When the user says "I just did my job," struggles to name achievements, or gives
+vague answers like "I worked on the backend," use these probes to extract hidden
+impact. Most people have achievements — they just don't recognize them as such.
+
+**Process Probe:** "Walk me through a typical day or week. What takes the most
+time? What decisions do you make?" → Reveals scope and judgment.
+
+**Problem Probe:** "What was broken, missing, or painful when you started this role?
+What's different now because you were there?" → Reveals before/after impact.
+
+**Scale Probe:** "How many users, requests, transactions, records, or dollars did
+your work touch? Even rough estimates help." → Forces quantification.
+
+**Counterfactual Probe:** "If you hadn't been in this role, what wouldn't have
+happened? What would have been worse?" → Reveals unique contribution.
+
+**Praise Probe:** "What did your manager specifically call out in reviews, 1-on-1s,
+or feedback? What were you recognized for?" → Surfaces external validation.
+
+**Teach Probe:** "What did you help others learn or do better? Did anyone come to
+you for help with something specific?" → Reveals expertise and influence.
+
+**Rescue Probe:** "Was there ever a time something went wrong and you helped fix it?
+A production issue, a missed deadline, a client escalation?" → Mines crisis stories.
+
+Each answer likely contains 1-2 hidden achievements. Reframe their response as an
+impact statement: "So what you're saying is you reduced onboarding time for new hires
+by building documentation that didn't exist before — that's an achievement worth
+capturing."
+
+For users who consistently undersell: "I notice you're framing these as 'just doing
+your job.' That's common, but the reality is that plenty of people in your role
+wouldn't have done these things. Let me help reframe what you've told me."
+
 ### Round 3 — Skills Deep Dive
 Categorize skills by honest proficiency — this matters for match scoring later:
 - **Expert** (could teach it, have debugged complex production issues): []
@@ -104,6 +140,44 @@ Categorize skills by honest proficiency — this matters for match scoring later
 - **Familiar** (understand concepts, done projects or courses): []
 
 For non-technical roles, capture domain expertise with the same granularity.
+
+### Skill Level Calibration
+
+Self-reported skill levels are unreliable — people overestimate in areas they
+enjoy and underestimate in areas they use daily but take for granted. After
+the initial skills categorization, run calibration on the top 5-8 skills that
+are most likely to appear in target JDs.
+
+For each skill, ask ONE calibration question matched to their claimed level:
+
+**Claimed Expert:** "Could you teach [skill] to a senior engineer and handle
+their edge-case questions? Have you debugged complex production issues with it?"
+→ If they hesitate or say "probably" → suggest Proficient instead.
+
+**Claimed Proficient:** "Could you build a production system with [skill]
+without significant reference to documentation? How recently and how often?"
+→ If they say "with some googling" or last used it 2+ years ago → suggest
+Working Knowledge instead.
+
+**Claimed Working Knowledge:** "Could you read and modify existing code in
+[skill], but not architect a system from scratch? Have you shipped something
+with it?"
+→ If they've only done tutorials → suggest Familiar instead.
+
+**Claimed Familiar:** "Have you used [skill] in a project or work context,
+or only tutorials and coursework?"
+→ If only heard of it → remove from skills list.
+
+**Calibration for underestimators:** If the user's work history shows daily
+use of a skill for 3+ years but they claim "working knowledge," flag it:
+"You've been using [skill] daily for [N] years at [Company]. That's typically
+proficient-level, not working knowledge. Would you be comfortable upgrading
+this?" → Many people underrate skills they find "easy" because they forget
+that easy-for-them is hard for others.
+
+Present adjustments as suggestions, not corrections: "Based on what you've
+described, I'd recommend adjusting [skill] from Expert to Proficient. Here's
+why: [reason]. What do you think?" The user always has final say.
 
 ### Round 4 — Education & Credentials
 Degrees, relevant coursework, certifications, ongoing learning, bootcamps.
