@@ -1,7 +1,7 @@
 {
   "name": "job-search-agent",
-  "version": "1.0.0",
-  "description": "End-to-end AI career coaching: profile building, JD analysis with match scoring, ATS-optimized resume tailoring, deep company research, tailored interview prep, mock interviews, recruiter coaching, rejection diagnosis, and offer negotiation.",
+  "version": "2.0.0",
+  "description": "End-to-end AI career coaching: profile building, JD analysis with match scoring, ATS-optimized resume tailoring, targeted cover letters, deep company research, tailored interview prep with performance tracking, mock interviews, recruiter coaching, rejection diagnosis, offer negotiation, networking strategy, skills gap closing, and search strategy auditing.",
   "owner": {
     "name": "Alan Wu"
   },
@@ -9,7 +9,7 @@
     {
       "name": "job-search-agent",
       "source": "./job-search-agent",
-      "description": "End-to-end job search coaching with profile building, JD analysis, resume tailoring, and interview prep."
+      "description": "End-to-end job search coaching with 8 skills: profile building, JD analysis, resume tailoring, cover letters, interview prep, networking strategy, skills gap closing, and search strategy auditing."
     }
   ]
 }

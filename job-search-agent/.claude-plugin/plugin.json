@@ -1,7 +1,7 @@
 {
   "name": "job-search-agent",
-  "version": "1.0.0",
-  "description": "End-to-end job search coaching: profile building, JD analysis with match scoring, ATS-optimized resume tailoring, deep company research, tailored interview prep with interviewer perspective reports, mock interviews, recruiter coaching, rejection diagnosis, and offer negotiation.",
+  "version": "2.0.0",
+  "description": "End-to-end job search coaching: profile building, JD analysis with match scoring, ATS-optimized resume tailoring, targeted cover letters, deep company research, tailored interview prep with interviewer perspective reports, mock interviews with performance tracking, recruiter coaching, rejection diagnosis, offer negotiation, networking strategy with LinkedIn optimization, skills gap closing with learning paths, and search strategy auditing.",
   "author": {
     "name": "Alan Wu"
   }
